@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Die Fürstenwalde App: Stadtleben, Bürgerservice, Vereine, Veranstaltungen und Community für Fürstenwalde/Spree – in einer modernen App für iPhone und Android." />
+    <meta name="theme-color" content="#d69b31" />
+    <meta name="application-name" content="Fürstenwalde App" />
+    <meta name="geo.region" content="DE-BB" />
+    <meta name="geo.placename" content="Fürstenwalde/Spree" />
+    <meta name="geo.position" content="52.3588;14.0619" />
+    <meta name="ICBM" content="52.3588, 14.0619" />
+    <title>Fürstenwalde App | Dein Fürstenwalde. Deine App.</title>
+    <link rel="canonical" href="https://fuerstenwalde.riccardopopp.de/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fuerstenwalde.riccardopopp.de/" />
+    <meta property="og:title" content="Fürstenwalde App | Dein Fürstenwalde. Deine App." />
+    <meta property="og:description" content="Die Fürstenwalde App: Stadtleben, Bürgerservice, Vereine, Veranstaltungen und Community für Fürstenwalde/Spree – in einer modernen App für iPhone und Android." />
+    <meta property="og:image" content="https://fuerstenwalde.riccardopopp.de/assets/city-hero.png" />
+    <meta property="og:locale" content="de_DE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fürstenwalde App | Dein Fürstenwalde. Deine App." />
+    <meta name="twitter:description" content="Die Fürstenwalde App: Stadtleben, Bürgerservice, Vereine, Veranstaltungen und Community für Fürstenwalde/Spree – in einer modernen App für iPhone und Android." />
+    <meta name="twitter:image" content="https://fuerstenwalde.riccardopopp.de/assets/city-hero.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png" />
+    <link rel="apple-touch-icon" href="assets/icon-512.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://fuerstenwalde.riccardopopp.de/#website",
+          "url": "https://fuerstenwalde.riccardopopp.de/",
+          "name": "Fürstenwalde App",
+          "description": "Dein Fürstenwalde. Deine App.",
+          "inLanguage": "de",
+          "publisher": { "@id": "https://fuerstenwalde.riccardopopp.de/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://fuerstenwalde.riccardopopp.de/#organization",
+          "name": "Fürstenwalde App",
+          "url": "https://fuerstenwalde.riccardopopp.de/",
+          "email": "anfrage@riccardopopp.de",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Fürstenwalde/Spree",
+            "postalCode": "15517",
+            "addressRegion": "Brandenburg",
+            "addressCountry": "DE"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Fürstenwalde/Spree",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Brandenburg"
+            }
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 52.3588,
+            "longitude": 14.0619
+          }
+        },
+        {
+          "@type": "MobileApplication",
+          "@id": "https://fuerstenwalde.riccardopopp.de/#app",
+          "name": "Fürstenwalde App",
+          "description": "Die Fürstenwalde App bündelt Stadtleben, Bürgerservice, Veranstaltungen, Vereine, lokale Angebote und Community-Funktionen in einer Plattform für Fürstenwalde/Spree.",
+          "operatingSystem": ["Android", "iOS"],
+          "applicationCategory": "LifestyleApplication",
+          "inLanguage": "de",
+          "author": { "@id": "https://fuerstenwalde.riccardopopp.de/#organization" },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/PreOrder"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://fuerstenwalde.riccardopopp.de/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Was zeigt die Startseite?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Im Bereich „Home“ findest du Schnellzugriff, Wetter, aktuelle Nachrichten und je nach Bereich Hinweise auf neue Inhalte." }
+            },
+            {
+              "@type": "Question",
+              "name": "Wie melde ich einen Mangel?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Öffne „Mängel melden“ über den Schnellzugriff oder den Verwaltungsbereich, wähle die passende Kategorie und beschreibe den Fall. Du kannst dafür auch direkt deinen aktuellen GPS-Standort und Bilder verwenden." }
+            },
+            {
+              "@type": "Question",
+              "name": "Wo finde ich Nachrichten der Stadt?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Städtische Nachrichten findest du auf „Home“ im Bereich „Aktuelle Nachrichten“ und im Nachrichtenbereich selbst. Dort erscheinen Pressemitteilungen und offizielle Hinweise." }
+            },
+            {
+              "@type": "Question",
+              "name": "Was ist der Unterschied zwischen Marktplatz, Nachbarschaftshilfe und Gruppen?",
+              "acceptedAnswer": { "@type": "Answer", "text": "„Lokaler Marktplatz“ ist für Kaufen und Verkaufen. „Nachbarschaftshilfe“ ist für Hilfe anbieten oder Hilfe suchen. „Gruppen“ sind für Austausch, Beiträge und Gemeinschaft zu Themen, Stadtteilen oder Interessen." }
+            },
+            {
+              "@type": "Question",
+              "name": "Wo finde ich Termine und Veranstaltungen?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Im Bereich „Events“ findest du kommende Veranstaltungen und Termine. Dort siehst du sowohl städtische Hinweise als auch eingetragene Events." }
+            },
+            {
+              "@type": "Question",
+              "name": "Wo ändere ich mein Profil?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Dein Profil erreichst du über „Mehr“. Dort kannst du dein Bild, deinen Namen und weitere persönliche Angaben anpassen." }
+            },
+            {
+              "@type": "Question",
+              "name": "Wo aktiviere ich Push-Mitteilungen?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Die Einstellung für Push-Mitteilungen findest du in deinem Profil beziehungsweise in den Einstellungen unter „Mehr“. Die Zahl auf dem App-Icon funktioniert nur, wenn Mitteilungen auf dem Gerät erlaubt sind." }
+            },
+            {
+              "@type": "Question",
+              "name": "Ein Bereich lädt nicht richtig. Was kann ich tun?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Öffne den Bereich zuerst neu oder nutze den eingebauten Aktualisieren-Button, falls vorhanden. Wenn das nicht hilft, prüfe deine Internetverbindung und starte die App erneut." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="preload" href="assets/city-hero.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="release-banner">
+      <strong>Release am 3. Juli 2026</strong>
+      <span>auf dem Stadtfest Fürstenwalde</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Fürstenwalde App Start">
+        <img src="assets/icon-512.png" alt="" />
+        <span>Fürstenwalde App</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" aria-label="Seitennavigation">
+        <a href="#produkt">Produkt</a>
+        <a href="#funktionen">Funktionen</a>
+        <a href="#werbung">Werbung</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-bg" src="assets/city-hero.png" alt="" width="1536" height="1024" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Fürstenwalde digital erleben</p>
+          <h1>Dein Fürstenwalde. Deine App.</h1>
+          <p>
+            Stadtleben, Bürgerservice, Veranstaltungen, Vereine, lokale Angebote
+            und Community-Funktionen in einer modernen App für Fürstenwalde.
+            Der offizielle Release ist am 3. Juli 2026 auf dem Stadtfest.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#produkt">App entdecken</a>
+            <a class="button secondary" href="#werbung">Werbung anfragen</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro" id="produkt">
+        <div>
+          <p class="section-kicker">Produktkern</p>
+          <h2>Eine lokale Plattform für Alltag, Service und Gemeinschaft.</h2>
+        </div>
+        <p>
+          Die Fürstenwalde App ist der digitale Begleiter für die Domstadt an
+          der Spree. Sie verbindet offizielle Informationen, lokale Services und
+          echte Community-Funktionen an einem Ort. Nutzerinnen und Nutzer finden
+          schnell, was gerade wichtig ist, können mitmachen, Angebote entdecken
+          und Fürstenwalde im Alltag einfacher organisieren.
+        </p>
+      </section>
+
+      <section class="story">
+        <div class="story-copy">
+          <p class="section-kicker">Warum diese App</p>
+          <h2>Eine Stadt hat viele Kanäle. Die App macht daraus einen Ort.</h2>
+        </div>
+        <div class="story-text">
+          <p>
+            Lokale Informationen sind oft verteilt: auf Webseiten, in sozialen
+            Netzwerken, in Aushängen, Amtsblättern, Vereinsgruppen, einzelnen
+            Portalen und persönlichen Chats. Das funktioniert irgendwie, kostet
+            im Alltag aber Zeit. Die Fürstenwalde App bündelt diese Wege in
+            einer Oberfläche, die für den täglichen Gebrauch gebaut ist.
+          </p>
+          <p>
+            Sie soll nicht nur informieren, sondern verbinden: Bürgerinnen und
+            Bürger mit der Verwaltung, Vereine mit neuen Mitgliedern,
+            Unternehmen mit Menschen vor Ort, Veranstalter mit Publikum und
+            Nachbarn mit Nachbarn. So entsteht eine digitale Infrastruktur, die
+            Fürstenwalde sichtbarer, zugänglicher und gemeinschaftlicher macht.
+          </p>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Schwerpunkte">
+        <div>
+          <strong>32+</strong>
+          <span>App-Bereiche</span>
+        </div>
+        <div>
+          <strong>24/7</strong>
+          <span>mobil erreichbar</span>
+        </div>
+        <div>
+          <strong>15517</strong>
+          <span>Postleitzahl · Fürstenwalde</span>
+        </div>
+      </section>
+
+      <section class="store-release" id="stores">
+        <div>
+          <p class="section-kicker">App herunterladen</p>
+          <h2>Zum Release im App Store und bei Google Play.</h2>
+          <p>
+            Die Fürstenwalde App erscheint am 3. Juli 2026 für iPhone und Android.
+            Trag deine E-Mail ein und du bekommst eine kurze Nachricht, sobald die App verfügbar ist.
+          </p>
+          <form class="notify-form" data-notify-form action="./notify.php" method="post">
+            <input class="form-hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="notify-row">
+              <label class="sr-only" for="notify-email">E-Mail-Adresse</label>
+              <input id="notify-email" name="email" type="email" placeholder="deine@email.de" autocomplete="email" required />
+              <button type="submit">Benachrichtigen</button>
+            </div>
+            <p class="form-status notify-status" data-notify-status aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="store-badges" aria-label="Store Links in Vorbereitung">
+          <a class="store-badge is-disabled" href="#" aria-disabled="true">
+            <img src="assets/apple-logo.svg" alt="" />
+            <span>
+              <small>Bald verfügbar im</small>
+              <strong>App Store</strong>
+            </span>
+          </a>
+          <a class="store-badge is-disabled" href="#" aria-disabled="true">
+            <img src="assets/google-play-logo.svg" alt="" />
+            <span>
+              <small>Bald verfügbar bei</small>
+              <strong>Google Play</strong>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="showcase">
+        <div class="showcase-copy">
+          <p class="section-kicker">App in Aktion</p>
+          <h2>Alles Wichtige bleibt schnell erreichbar.</h2>
+          <p>
+            Die Startseite bündelt Wetter, Nachrichten, Termine,
+            Schnellzugriffe, Anzeigen, Marktplatz und Nachbarschaftshilfe. Von
+            dort aus führt die App in Verwaltung, Vereine, Mobilität, Angebote
+            und Beteiligung.
+          </p>
+          <p>
+            Der Aufbau folgt dem Alltag: morgens kurz Wetter und Nachrichten
+            prüfen, später einen Termin finden, am Wochenende Veranstaltungen
+            entdecken, zwischendurch ein Angebot teilen oder im Verein aktiv
+            bleiben.
+          </p>
+        </div>
+        <div class="showcase-highlight">
+          <img class="showcase-home-person" src="assets/michi-app.png" alt="Home Screen der Fürstenwalde App auf einem Smartphone" width="1122" height="1402" loading="lazy" />
+        </div>
+      </section>
+
+      <section class="features" id="funktionen">
+        <div class="section-heading">
+          <p class="section-kicker">Was die App leistet</p>
+          <h2>Gebaut für Menschen, die hier leben, arbeiten und mitmachen.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span>01</span>
+            <h3>Stadt & Verwaltung</h3>
+            <p>Mängel melden, Termine buchen, Kontakte finden, Öffnungszeiten prüfen und Amtsblätter lesen.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Aktuelles & Veranstaltungen</h3>
+            <p>Lokale Nachrichten, Termine und wichtige Hinweise übersichtlich auf der Startseite und in Detailansichten.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Vereine & Gemeinschaft</h3>
+            <p>Vereine, Teams, Gruppen, private Nachrichten und digitale Räume für lokales Engagement.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Handel & Angebote</h3>
+            <p>Lokale Geschäfte, Fürstenwalde Gutschein, Deals, Werbeflächen und Kampagnen für regionale Sichtbarkeit.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Marktplatz & Teilen</h3>
+            <p>Kaufen, verkaufen, verleihen, Hilfe anbieten, Hilfe finden und verlorene Dinge wieder zusammenbringen.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>Orientierung & Wissen</h3>
+            <p>ÖPNV, Abfallkalender, Ärzte, Notdienste, Tourismus, Stadtgeschichte und der lokale Assistent Waldemar.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="audiences">
+        <div class="section-heading">
+          <p class="section-kicker">Für wen</p>
+          <h2>Ein Produkt für die Menschen und Organisationen der Stadt.</h2>
+        </div>
+        <div class="audience-grid">
+          <article>
+            <h3>Bürgerinnen & Bürger</h3>
+            <p>
+              Schnell wissen, was los ist, Verwaltungskontakte finden,
+              Hilfsangebote entdecken, Dinge teilen und im Stadtleben leichter
+              den Überblick behalten.
+            </p>
+          </article>
+          <article>
+            <h3>Vereine & Gruppen</h3>
+            <p>
+              Angebote, Teams und Neuigkeiten sichtbar machen, Mitglieder
+              erreichen und lokale Gemeinschaft digital organisieren.
+            </p>
+          </article>
+          <article>
+            <h3>Unternehmen & Händler</h3>
+            <p>
+              Lokale Reichweite aufbauen, Aktionen platzieren, beim
+              Fürstenwalde Gutschein sichtbar werden und Menschen direkt vor Ort
+              erreichen.
+            </p>
+          </article>
+          <article>
+            <h3>Besucher & Gäste</h3>
+            <p>
+              Sehenswürdigkeiten, Tourismusinformationen, Veranstaltungen,
+              Mobilität und praktische Anlaufstellen kompakt auf dem Smartphone
+              finden.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="waldemar">
+        <div>
+          <p class="section-kicker">Frag Waldemar</p>
+          <h2>Ein lokaler Assistent für Fragen rund um Fürstenwalde.</h2>
+          <p>
+            Waldemar beantwortet Fragen zu Stadtleben, Veranstaltungen,
+            Verwaltung, Mobilität, Orten, Geschäften, Dienstleistungen,
+            Vereinen und zur Orientierung in der App.
+          </p>
+          <p>
+            Die Idee dahinter: Wer eine schnelle lokale Antwort sucht, soll
+            nicht erst wissen müssen, in welchem Bereich der App oder auf
+            welcher Website die Information liegt. Waldemar hilft beim Einstieg
+            und bleibt dabei bewusst auf Fürstenwalde fokussiert.
+          </p>
+        </div>
+        <div class="waldemar-visual">
+          <img class="waldemar-timmy" src="assets/waldemar-timmy.png" alt="Frag Waldemar auf einem Smartphone" width="1122" height="1402" loading="lazy" />
+          <img class="waldemar-badge" src="assets/waldemar-logo.png" alt="Waldemar Logo" width="500" height="500" loading="lazy" />
+        </div>
+      </section>
+
+      <section class="city-band">
+        <img src="assets/city-band.jpg" alt="" width="1920" height="955" loading="lazy" />
+        <div>
+          <p class="section-kicker">Fürstenwalde zuerst</p>
+          <h2>Eine Bühne für Menschen, Orte und Angebote der Stadt.</h2>
+        </div>
+      </section>
+
+      <section class="ads" id="werbung">
+        <div>
+          <p class="section-kicker">Lokale Sichtbarkeit</p>
+          <h2>Werbung buchen, wo Fürstenwalde hinschaut.</h2>
+          <p>
+            Unternehmen, Vereine und Veranstalter können Platzierungen in der
+            App anfragen: Banner, lokale Deals und native Platzierungen für
+            Menschen direkt vor Ort.
+          </p>
+          <p>
+            Werbung wird dabei nicht als Fremdkörper gedacht, sondern als Teil
+            des lokalen Nutzens: Angebote aus Handel, Gastronomie, Freizeit,
+            Kultur, Dienstleistungen und Vereinsleben erscheinen dort, wo sie
+            für Fürstenwalde relevant sind.
+          </p>
+        </div>
+        <form class="ad-contact-form" data-ad-form action="./contact.php" method="post">
+          <h3>Werbeanfrage senden</h3>
+          <input class="form-hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label>
+            <span>Dein Name</span>
+            <input name="name" type="text" placeholder="Max Mustermann" autocomplete="name" required />
+          </label>
+          <label>
+            <span>E-Mail-Adresse</span>
+            <input name="email" type="email" placeholder="max@example.com" autocomplete="email" required />
+          </label>
+          <label>
+            <span>Deine Nachricht</span>
+            <textarea
+              name="message"
+              placeholder="Erzähl uns kurz, welches Angebot du in der Fürstenwalde App bewerben möchtest..."
+              required
+            ></textarea>
+          </label>
+          <button class="form-submit" type="submit">Nachricht senden →</button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="team">
+        <div class="section-heading">
+          <p class="section-kicker">Das Team</p>
+          <h2>Gebaut mit lokaler Nähe, Produktblick und direktem Draht zur Stadt.</h2>
+        </div>
+        <div class="team-grid">
+          <article><strong>Riccardo Popp</strong><span>Konzept, Entwicklung, Design und Produktaufbau</span></article>
+          <article><strong>Marco Eggert</strong><span>Entwicklung, Konzept und Support</span></article>
+          <article><strong>Kai Hamacher</strong><span>Marketing und Werbeverkauf</span></article>
+          <article><strong>Ibo Khreis</strong><span>Anzeigenverkauf und Marketing</span></article>
+        </div>
+      </section>
+
+      <section class="contact" id="kontakt">
+        <div>
+          <p class="section-kicker">Kontakt</p>
+          <h2>Fragen, Support oder Werbung?</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:support@riccardopopp.de">
+            <small>Support & allgemeine Fragen</small>
+            support@riccardopopp.de
+          </a>
+          <a href="mailto:anfrage@riccardopopp.de">
+            <small>Werbung & Kooperationen</small>
+            anfrage@riccardopopp.de
+          </a>
+          <a href="./impressum.html">Impressum</a>
+          <a href="./datenschutz.html">Datenschutz</a>
+          <a href="./nutzungsbedingungen.html">Nutzungsbedingungen</a>
+        </div>
+      </section>
+
+      <section class="support-faq" id="faq" aria-labelledby="support-faq-title">
+        <div class="section-heading">
+          <p class="section-kicker">Hilfe & Support</p>
+          <h2 id="support-faq-title">Antworten zur Nutzung der App.</h2>
+          <p>
+            Diese Fragen und Antworten stammen aus dem Hilfe-Bereich der
+            Fürstenwalde App und geben einen schnellen Überblick für den Start.
+          </p>
+        </div>
+
+        <div class="faq-groups">
+          <article class="faq-group">
+            <h3>Schnellstart</h3>
+            <details>
+              <summary>Was zeigt die Startseite?</summary>
+              <p>Im Bereich „Home“ findest du Schnellzugriff, Wetter, aktuelle Nachrichten und je nach Bereich Hinweise auf neue Inhalte.</p>
+            </details>
+            <details>
+              <summary>Wofür sind Zahlen oder Hinweise an Bereichen da?</summary>
+              <p>Diese Hinweise zeigen neue oder noch nicht gelesene Inhalte, zum Beispiel bei „Mängel melden“, Nachrichten oder Chats.</p>
+            </details>
+            <details>
+              <summary>Wie bewege ich mich am schnellsten durch die App?</summary>
+              <p>Unten wechselst du zwischen „Home“, „Events“, „Stadt“, „Vereine“ und „Mehr“. In „Home“ kommst du zusätzlich über den Schnellzugriff direkt zu „Mängel melden“, „ÖPNV“, „Abfallkalender“ und „Notfall“.</p>
+            </details>
+          </article>
+
+          <article class="faq-group">
+            <h3>Bereiche der App</h3>
+            <details>
+              <summary>Wie melde ich einen Mangel?</summary>
+              <p>Öffne „Mängel melden“ über den Schnellzugriff oder den Verwaltungsbereich, wähle die passende Kategorie und beschreibe den Fall. Du kannst dafür auch direkt deinen aktuellen GPS-Standort und Bilder verwenden.</p>
+            </details>
+            <details>
+              <summary>Wo finde ich Nachrichten der Stadt?</summary>
+              <p>Städtische Nachrichten findest du auf „Home“ im Bereich „Aktuelle Nachrichten“ und im Nachrichtenbereich selbst. Dort erscheinen Pressemitteilungen und offizielle Hinweise.</p>
+            </details>
+            <details>
+              <summary>Was ist der Unterschied zwischen Marktplatz, Nachbarschaftshilfe und Gruppen?</summary>
+              <p>„Lokaler Marktplatz“ ist für Kaufen und Verkaufen. „Nachbarschaftshilfe“ ist für Hilfe anbieten oder Hilfe suchen. „Gruppen“ sind für Austausch, Beiträge und Gemeinschaft zu Themen, Stadtteilen oder Interessen.</p>
+            </details>
+            <details>
+              <summary>Wie funktionieren Gruppen und Chats?</summary>
+              <p>In „Gruppen“ siehst du Beiträge und Diskussionen. Unter „Nachrichten“ schreibst du privat mit anderen Nutzern, zum Beispiel nach einer Kontaktaufnahme aus „Lokaler Marktplatz“, „Nachbarschaftshilfe“ oder einer Gruppe.</p>
+            </details>
+            <details>
+              <summary>Wo finde ich Termine und Veranstaltungen?</summary>
+              <p>Im Bereich „Events“ findest du kommende Veranstaltungen und Termine. Dort siehst du sowohl städtische Hinweise als auch eingetragene Events.</p>
+            </details>
+            <details>
+              <summary>Was finde ich unter „Stadt“ und „Mehr“?</summary>
+              <p>Unter „Stadt“ liegen stadtnahe Inhalte und Verwaltungsbezüge. Unter „Mehr“ findest du zusätzliche Funktionen, Einstellungen, Profil, Rechtliches und weitere App-Bereiche aus dem Menü.</p>
+            </details>
+          </article>
+
+          <article class="faq-group">
+            <h3>Konto & Einstellungen</h3>
+            <details>
+              <summary>Wo ändere ich mein Profil?</summary>
+              <p>Dein Profil erreichst du über „Mehr“. Dort kannst du dein Bild, deinen Namen und weitere persönliche Angaben anpassen.</p>
+            </details>
+            <details>
+              <summary>Wo aktiviere ich Push-Mitteilungen?</summary>
+              <p>Die Einstellung für Push-Mitteilungen findest du in deinem Profil beziehungsweise in den Einstellungen unter „Mehr“. Die Zahl auf dem App-Icon funktioniert nur, wenn Mitteilungen auf dem Gerät erlaubt sind.</p>
+            </details>
+            <details>
+              <summary>Wozu dient mein Profil in der App?</summary>
+              <p>Dein Profil wird für Beiträge, Nachrichten, Gruppen und andere Community-Funktionen genutzt. Dort steuerst du auch wichtige Konto- und Benachrichtigungseinstellungen.</p>
+            </details>
+          </article>
+
+          <article class="faq-group">
+            <h3>Häufige Fragen</h3>
+            <details>
+              <summary>Ein Bereich lädt nicht richtig. Was kann ich tun?</summary>
+              <p>Öffne den Bereich zuerst neu oder nutze den eingebauten Aktualisieren-Button, falls vorhanden. Wenn das nicht hilft, prüfe deine Internetverbindung und starte die App erneut.</p>
+            </details>
+            <details>
+              <summary>Warum sehe ich nicht sofort neue Inhalte?</summary>
+              <p>Manche Bereiche laden Inhalte beim Öffnen oder beim Zurückkehren in die App neu. Wenn du sofort den neuesten Stand brauchst, kannst du in einzelnen Bereichen zusätzlich manuell aktualisieren.</p>
+            </details>
+            <details>
+              <summary>Wohin mit echten Verwaltungsfragen?</summary>
+              <p>Für Fragen an die Stadtverwaltung gibt es den separaten Bereich „Frag die Verwaltung“. „Hilfe & Support“ ist nur für Fragen zur Nutzung der App gedacht.</p>
+            </details>
+            <details>
+              <summary>Wohin mit technischem Feedback zur App?</summary>
+              <p>Wenn dir in der App etwas auffällt oder eine Funktion unklar ist, gehört das in „Hilfe & Support“ oder in den vorgesehenen Feedback-Bereich. Anliegen an die Stadt selbst gehören dort nicht hinein.</p>
+            </details>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <span>Fürstenwalde App</span>
+        <span>Dein Fürstenwalde. Deine App.</span>
+      </div>
+      <nav class="footer-legal" aria-label="Rechtliches">
+        <a href="./impressum.html">Impressum</a>
+        <a href="./datenschutz.html">Datenschutz</a>
+        <a href="./nutzungsbedingungen.html">Nutzungsbedingungen</a>
+      </nav>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

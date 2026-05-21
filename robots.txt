@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /contact.php
+Disallow: /notify.php
+
+Sitemap: https://fuerstenwalde.riccardopopp.de/sitemap.xml
