@@ -2,7 +2,7 @@ const header = document.querySelector(".site-header");
 const root = document.documentElement;
 const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 const revealTargets = document.querySelectorAll(
-  ".intro, .story, .proof-strip, .store-release, .showcase, .features, .audiences, .waldemar, .city-band, .ads, .team, .contact, .support-faq"
+  ".intro, .story, .proof-strip, .store-release, .showcase, .features, .audiences, .waldemar, .city-band, .partners, .ads, .team, .contact, .support-faq"
 );
 const motionTargets = {
   hero: document.querySelector(".hero"),
@@ -96,43 +96,6 @@ window.addEventListener(
   { passive: true }
 );
 
-document.querySelector("[data-notify-form]")?.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const form = event.currentTarget;
-  const button = form.querySelector("button[type='submit']");
-  const status = form.querySelector("[data-notify-status]");
-  const originalText = button.textContent;
-
-  button.disabled = true;
-  button.textContent = "…";
-  status.textContent = "";
-  status.classList.remove("is-success", "is-error");
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { Accept: "application/json" },
-    });
-    const result = await response.json().catch(() => ({}));
-
-    if (!response.ok || !result.ok) {
-      throw new Error(result.message || "Eintragung fehlgeschlagen.");
-    }
-
-    form.reset();
-    status.textContent = result.message || "Du wirst benachrichtigt, sobald die App verfügbar ist.";
-    status.classList.add("is-success");
-  } catch (error) {
-    status.textContent = error.message || "Eintragung fehlgeschlagen. Bitte versuche es erneut.";
-    status.classList.add("is-error");
-  } finally {
-    button.disabled = false;
-    button.textContent = originalText;
-  }
-});
-
 const navToggle = document.querySelector(".nav-toggle");
 navToggle?.addEventListener("click", () => {
   const isOpen = header.classList.toggle("nav-open");
@@ -186,3 +149,30 @@ document.querySelector("[data-ad-form]")?.addEventListener("submit", async (even
     button.textContent = originalButtonText;
   }
 });
+
+(function initTilt() {
+  if (motionQuery.matches) return;
+  if (window.matchMedia("(hover: none)").matches) return;
+
+  const cards = document.querySelectorAll(
+    ".feature-grid article, .audience-grid article, .team-grid article, .faq-group"
+  );
+
+  cards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transition = "box-shadow 220ms ease, border-color 220ms ease";
+    });
+
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(900px) translateY(-6px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transition = "transform 600ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 220ms ease, border-color 220ms ease";
+      card.style.transform = "";
+    });
+  });
+}());

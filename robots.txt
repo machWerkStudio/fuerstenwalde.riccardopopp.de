@@ -4,4 +4,4 @@ Allow: /
 Disallow: /contact.php
 Disallow: /notify.php
 
-Sitemap: https://fuerstenwalde.riccardopopp.de/sitemap.xml
+Sitemap: https://mein-fw.de/sitemap.xml

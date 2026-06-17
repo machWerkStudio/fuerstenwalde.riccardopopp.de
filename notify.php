@@ -31,7 +31,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 $email = preg_replace('/[\r\n]+/', '', $email);
 
-$to = 'anfrage@riccardopopp.de';
+$to = 'anfrage@mein-fw.de';
 $subject = 'Launch-Benachrichtigung - Fuerstenwalde App';
 $body = "Neue Launch-Benachrichtigungs-Eintragung\n\n";
 $body .= "E-Mail: {$email}\n";
@@ -39,12 +39,12 @@ $body .= "IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'unbekannt') . "\n";
 $body .= "Zeit: " . date('Y-m-d H:i:s') . "\n";
 
 $headers = [
-    'From: Fuerstenwalde App <info@riccardopopp.de>',
+    'From: Mein Fürstenwalde App <info@mein-fw.de>',
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
 ];
 
-$sent = mail($to, $subject, $body, implode("\r\n", $headers), '-f info@riccardopopp.de');
+$sent = mail($to, $subject, $body, implode("\r\n", $headers), '-f info@mein-fw.de');
 
 if (!$sent) {
     http_response_code(500);

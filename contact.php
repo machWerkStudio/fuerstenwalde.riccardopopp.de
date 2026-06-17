@@ -35,9 +35,9 @@ $name = preg_replace('/[\r\n]+/', ' ', $name);
 $email = preg_replace('/[\r\n]+/', '', $email);
 $message = str_replace(["\r\n", "\r"], "\n", $message);
 
-$to = 'anfrage@riccardopopp.de';
+$to = 'anfrage@mein-fw.de';
 $subject = 'Werbeanfrage - Fuerstenwalde App';
-$body = "Neue Werbeanfrage über fuerstenwalde.riccardopopp.de\n\n";
+$body = "Neue Werbeanfrage über mein-fw.de\n\n";
 $body .= "Name: {$name}\n";
 $body .= "E-Mail: {$email}\n";
 $body .= "IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'unbekannt') . "\n";
@@ -45,14 +45,14 @@ $body .= "Zeit: " . date('Y-m-d H:i:s') . "\n\n";
 $body .= "Nachricht:\n{$message}\n";
 
 $headers = [
-    'From: Fuerstenwalde App <info@riccardopopp.de>',
+    'From: Mein Fürstenwalde App <info@mein-fw.de>',
     'Reply-To: ' . $name . ' <' . $email . '>',
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
     'X-Mailer: PHP/' . phpversion(),
 ];
 
-$sent = mail($to, $subject, $body, implode("\r\n", $headers), '-f info@riccardopopp.de');
+$sent = mail($to, $subject, $body, implode("\r\n", $headers), '-f info@mein-fw.de');
 
 if (!$sent) {
     http_response_code(500);
