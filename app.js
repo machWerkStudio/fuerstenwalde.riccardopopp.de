@@ -155,7 +155,7 @@ document.querySelector("[data-ad-form]")?.addEventListener("submit", async (even
   if (window.matchMedia("(hover: none)").matches) return;
 
   const cards = document.querySelectorAll(
-    ".feature-grid article, .audience-grid article, .team-grid article, .faq-group"
+    ".feature-grid article, .audience-grid article, .team-grid article"
   );
 
   cards.forEach((card) => {
@@ -176,3 +176,12 @@ document.querySelector("[data-ad-form]")?.addEventListener("submit", async (even
     });
   });
 }());
+
+document.querySelectorAll(".faq-q").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const item = btn.closest(".faq-item");
+    const isOpen = item.classList.contains("is-open");
+    item.classList.toggle("is-open", !isOpen);
+    btn.setAttribute("aria-expanded", String(!isOpen));
+  });
+});
