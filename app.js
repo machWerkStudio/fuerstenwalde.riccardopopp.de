@@ -178,10 +178,24 @@ document.querySelector("[data-ad-form]")?.addEventListener("submit", async (even
 }());
 
 document.querySelectorAll(".faq-q").forEach((btn) => {
+  const answer = document.getElementById(btn.getAttribute("aria-controls"));
+  const isInitiallyOpen = btn.getAttribute("aria-expanded") === "true";
+
+  if (answer) {
+    answer.hidden = !isInitiallyOpen;
+  }
+
   btn.addEventListener("click", () => {
     const item = btn.closest(".faq-item");
+    const answer = document.getElementById(btn.getAttribute("aria-controls"));
     const isOpen = item.classList.contains("is-open");
-    item.classList.toggle("is-open", !isOpen);
-    btn.setAttribute("aria-expanded", String(!isOpen));
+    const shouldOpen = !isOpen;
+
+    item.classList.toggle("is-open", shouldOpen);
+    btn.setAttribute("aria-expanded", String(shouldOpen));
+
+    if (answer) {
+      answer.hidden = !shouldOpen;
+    }
   });
 });
