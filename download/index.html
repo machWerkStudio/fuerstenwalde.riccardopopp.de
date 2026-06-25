@@ -1,28 +1,3 @@
-<?php
-$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
-
-$ios = 'https://apps.apple.com/app/id6775478256';
-$android = 'https://play.google.com/store/apps/details?id=de.riccardopopp.fuerstenwalde';
-
-$isiOS = stripos($ua, 'iPhone') !== false
-    || stripos($ua, 'iPad') !== false
-    || stripos($ua, 'iPod') !== false
-    || (
-        stripos($ua, 'Macintosh') !== false
-        && stripos($ua, 'Mobile') !== false
-    );
-$isAndroid = stripos($ua, 'Android') !== false;
-
-if ($isiOS) {
-    header('Location: ' . $ios, true, 302);
-    exit;
-}
-
-if ($isAndroid) {
-    header('Location: ' . $android, true, 302);
-    exit;
-}
-?>
 <!doctype html>
 <html lang="de">
 <head>
@@ -85,15 +60,31 @@ if ($isAndroid) {
     .secondary { background:#eef4ff; color:var(--blue); border:1px solid rgba(0,82,215,.2); }
     small { display:block; margin-top:18px; color:#5d6575; line-height:1.35; }
   </style>
+  <script>
+    (() => {
+      const IOS_URL = 'https://apps.apple.com/app/id6775478256';
+      const ANDROID_URL = 'https://play.google.com/store/apps/details?id=de.riccardopopp.fuerstenwalde';
+
+      const ua = navigator.userAgent || navigator.vendor || window.opera || '';
+      const isiOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const isAndroid = /Android/i.test(ua);
+
+      if (isiOS) {
+        window.location.replace(IOS_URL);
+      } else if (isAndroid) {
+        window.location.replace(ANDROID_URL);
+      }
+    })();
+  </script>
 </head>
 <body>
   <main>
     <div class="badge">KOSTENLOS LADEN</div>
     <h1>Mein Fürstenwalde App</h1>
-    <p>Wähle deinen Store und lade die App direkt herunter.</p>
-    <a class="primary" href="<?php echo htmlspecialchars($ios, ENT_QUOTES, 'UTF-8'); ?>">Im App Store laden</a>
-    <a class="secondary" href="<?php echo htmlspecialchars($android, ENT_QUOTES, 'UTF-8'); ?>">Bei Google Play laden</a>
-    <small>Auf iPhone, iPad und Android leiten wir automatisch in den passenden Store weiter.</small>
+    <p>Wir leiten dich automatisch in den passenden Store weiter. Falls das nicht klappt, wähle deinen Store einfach hier aus.</p>
+    <a class="primary" href="https://apps.apple.com/app/id6775478256">Im App Store laden</a>
+    <a class="secondary" href="https://play.google.com/store/apps/details?id=de.riccardopopp.fuerstenwalde">Bei Google Play laden</a>
+    <small>Auf dem Desktop werden beide Optionen angezeigt.</small>
   </main>
 </body>
 </html>
